@@ -27,9 +27,15 @@
             <label>Username</label>
             <input placeholder="Enter your username">
           </template>
-          <template v-else>
-            <label>Email</label>
-            <input placeholder="Enter your email address">
+          <template v-else></br>
+            <input placeholder="Name">
+            <input placeholder="Email address">
+            <input placeholder="# in household?">
+            <input placeholder="Children in home?"></br>
+            <input placeholder="Other pets?">
+            <input placeholder="Had pets before?">
+            <input placeholder="How active are you?">
+            <input placeholder="Travel often?">
           </template>
         </form>
       </div>
@@ -89,55 +95,13 @@ position: fixed;
 z-index: 40;
 }
 
-/* .site-content {
-bottom: 0;
-width: 100%;
-} */
-
-/* .phone-image {
-background-position: center;
-display: block;
-margin: -200px 20px 0px -220px;
-position: fixed;
-z-index: -1px;
-top: 0%;
-}
-
-.benton-image {
-display: block;
-margin: 70px 5px 75px 550px;
-position: fixed;
-z-index: 2;
-}
-
-.to-button {
-  bottom: 120px;
-  right: 667px;
-  border-width: 1px;
-  justify-content: space-around;
-  background-color: grey;
-  color: #51bbd9;
-  font-family: Comfortaa;
-  font-size: 20px;
-  text-align: center;
-  position: fixed;
-  cursor: wait;
-  background-color: #bbb;
-  padding: .5em;
-  border-radius: 6px;
-  /* color: #fff; */
-  /* font-size: 20px;
-  text-decoration: none;
-  border: none;
-} */
-
 .back-button, a:visited {
-bottom: 162px;
-right: 40%;
+bottom: 10px;
+right: 47%;
 border-width: 1px;
-border-radius: 25px;
+border-radius: 15px;
 justify-content: space-around;
-padding: 20px;
+padding: 10px;
 background-color: grey;
 color: #51bbd9;
 font-family: Comfortaa;
@@ -146,20 +110,6 @@ text-align: center;
 position: fixed;
 cursor: wait;
 }
-
-/* .tagline {
-font-family: Comfortaa;
-position: fixed;
-border-style: hidden;
-border-width: 1px;
-display: flex;
-flex-direction: column;
-font-size: 20px;
-text-align: center;
-margin-left: -35px;
-bottom: 24%;
-width: 100%;
-} */
 
 .site-footer {
 position: fixed;
@@ -186,12 +136,12 @@ margin-bottom: 5px;
 #form {
 display: flex;
 position: fixed;
-margin: 150px 20px 20px 250px;
-justify-content: center;
+margin: 70px 160px 120px 150px;
 font-family: Comfortaa;
-font-size: 40px;
+font-size: 30px;
 text-align: center;
 flex-direction: column;
+width: 75%;
 }
 
 #type {
@@ -200,12 +150,5 @@ width: 260px;
 font-size: 20px;
 font-family: Comfortaa;
 }
-
-/* #aDog {
-text-align: center;
-margin: 5px 20px 5px 20px;
-font-family: Comfortaa;
-font-size: 30px;
-} */
 
 </style>
