@@ -40,6 +40,10 @@
         </form>
       </div>
 
+      <div class="submit-button">
+        <button type="button">Submit</button>
+      </div>
+
       <main class="site-content">
         <!-- <div id="aDog">
         </div> -->
@@ -95,9 +99,9 @@ position: fixed;
 z-index: 40;
 }
 
-.back-button, a:visited {
-bottom: 10px;
-right: 47%;
+.back-button, a:hover {
+bottom: 2%;
+right: 48%;
 border-width: 1px;
 border-radius: 15px;
 justify-content: space-around;
@@ -109,6 +113,12 @@ font-size: 20px;
 text-align: center;
 position: fixed;
 cursor: wait;
+}
+
+.submit-button {
+  font-family: Comfortaa;
+  margin-top: 15%;
+  margin-right: 4%;
 }
 
 .site-footer {
@@ -126,9 +136,9 @@ width: 15%;
 }
 
 .background-image-2 {
-position: absolute;
+position: fixed;
 z-index: -1;
-margin-top: 14%;
+margin-top: 1%;
 margin-left: 8%;
 margin-bottom: 5px;
 }
