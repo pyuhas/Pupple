@@ -1,17 +1,42 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <PageOne v-if= 'showPage' :showPage='showPage' :togglePage='togglePage' />
+    <PageTwo v-else= 'showPage' :showPage='showPage' :togglePage='togglePage'/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import PageOne from './components/PageOne.vue'
+  import PageTwo from './components/PageTwo.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    PageOne,
+    PageTwo
+  },
+  data (){
+    return {
+      showPage: true
+    }
+  },
+  methods: {
+    togglePage(){
+      if (this.showPage){
+        this.showPage=false
+      }else{
+        this.showPage=true
+      }
+    }
+  },
+  created(){
+    fetch('http://localhost3000/animals')
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(match){
+        console.log(match);
+      });
   }
 }
 </script>
