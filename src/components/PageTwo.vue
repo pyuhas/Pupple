@@ -10,7 +10,7 @@
 
     <body>
       <header class="site-header">
-        <h1 class="site-header-1">Here is your new buddy:</h1>
+        <h1 class="site-header-1">Let's find your new buddy:</h1>
         <nav class="site-nav--main">
 
         <div class="back-button">
@@ -20,6 +20,7 @@
         </nav>
       </header>
 
+
       <div id="form">
         <form action="">
           <label for="doggo_type">Please answer these questions about yourself to find your fur-ever friend:</label>
@@ -28,27 +29,36 @@
             <input placeholder="Enter your username">
           </template>
           <template v-else></br>
-            <input placeholder="Name">
-            <input placeholder="Email address">
+            <input placeholder="Name?">
+            <input placeholder="Email address?">
+            <input placeholder="Age?">
             <input placeholder="# in household?">
-            <input placeholder="Children in home?"></br>
-            <input placeholder="Other pets?">
+            <input placeholder="Children in home?">
+            <input placeholder="Rent or own?"></br>
+            <input placeholder="Where will dog sleep?">
+            <input placeholder="Any allergies?">
+            <input placeholder="Willing to train?">
+            <input placeholder="Why adopt?">
             <input placeholder="Had pets before?">
+            <input placeholder="Occupation?"></br>
+            <input placeholder="Daily work schedule?">
+            <input placeholder="Typical weekend?">
+            <input placeholder="Indoor/Outdoor person?">
             <input placeholder="How active are you?">
             <input placeholder="Travel often?">
+            <input placeholder="Any concerns?">
           </template>
         </form>
       </div>
 
       <div class="submit-button">
-        <button type="button">Submit</button>
+        <p>Submit</p>
+        <!-- <button @click='getMatches'>Submit</button> -->
       </div>
 
       <main class="site-content">
-        <!-- <div id="aDog">
-        </div> -->
         <div class="background-image-2">
-          <img src="http://southpawpetservices.com/wp-content/uploads/2013/05/group-of-dogs-960x336.jpg" style="height:500px; width:1200px" alt="dog-pic">
+          <img src="https://www.billingsk9coaching.com/wp-content/uploads/2018/02/group1.png" style="height:500px; width:1200px" alt="dog-pic">
         </div>
       </main>
 
@@ -60,16 +70,17 @@
   </div>
 </template>
 
-
+<!-- when you do fetch, you want it to alter
+pass in prop?
+populate with the matches -->
 
 
 <script>
 
-
-
 export default {
   name: 'PageTwo',
-  props: ['showPage', 'togglePage']
+  props: ['showPage', 'togglePage', 'getMatches'],
+
 }
 </script>
 
@@ -99,27 +110,42 @@ position: fixed;
 z-index: 40;
 }
 
-.back-button, a:hover {
-bottom: 2%;
-right: 48%;
-border-width: 1px;
-border-radius: 15px;
-justify-content: space-around;
-padding: 10px;
-background-color: grey;
-color: #51bbd9;
-font-family: Comfortaa;
-font-size: 20px;
-text-align: center;
-position: fixed;
-cursor: wait;
+.submit-button {
+  background-color: #51bbd9;
+  top: 200px;
+  right: 190px;
+  /* justify-content: space-around; */
+  font-family: Comfortaa;
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  cursor: wait;
+  border-radius: 6px;
+  padding: 0px;
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+  color: white;
 }
 
-.submit-button {
+button {
+  bottom: 20px;
+  right: 680px;
+  border-width: 1px;
+  justify-content: space-around;
+  background-color: grey;
+  color: white;
   font-family: Comfortaa;
-  margin-top: 15%;
-  margin-right: 4%;
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  cursor: wait;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  color: white;
 }
+
 
 .site-footer {
 position: fixed;
@@ -138,7 +164,7 @@ width: 15%;
 .background-image-2 {
 position: fixed;
 z-index: -1;
-margin-top: 1%;
+margin-top: 15.5%;
 margin-left: 8%;
 margin-bottom: 5px;
 }
@@ -147,17 +173,21 @@ margin-bottom: 5px;
 display: flex;
 position: fixed;
 margin: 70px 160px 120px 150px;
+background-color: grey;
+padding: 2%;
 font-family: Comfortaa;
-font-size: 30px;
+font-size: 25px;
 text-align: center;
 flex-direction: column;
 width: 75%;
+color: white;
+border-radius: 25px;
 }
 
 #type {
 display: flex;
 width: 260px;
-font-size: 20px;
+font-size: 1px;
 font-family: Comfortaa;
 }
 

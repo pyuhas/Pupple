@@ -95,22 +95,20 @@ position: fixed;
 z-index: 2;
 }
 
-.to-button {
-  bottom: 120px;
-  right: 667px;
+button {
+  bottom: 150px;
+  right: 650px;
   border-width: 1px;
   justify-content: space-around;
   background-color: grey;
-  color: #51bbd9;
+  color: white;
   font-family: Comfortaa;
   font-size: 20px;
   text-align: center;
   position: fixed;
   cursor: wait;
-  background-color: #bbb;
   padding: .5em;
   border-radius: 6px;
-  /* color: #fff; */
   font-size: 20px;
   text-decoration: none;
   border: none;
