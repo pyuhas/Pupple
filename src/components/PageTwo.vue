@@ -119,7 +119,7 @@ z-index: 40;
   font-size: 20px;
   text-align: center;
   position: fixed;
-  cursor: wait;
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
   border-radius: 6px;
   padding: 0px;
   font-size: 20px;

@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <PageOne v-if= 'showPage' :showPage='showPage' :togglePage='togglePage' />
-    <PageTwo v-else= 'showPage' :showPage='showPage' :togglePage='togglePage'/>
+    <PageTwo
+      v-else= 'showPage'
+      :showPage='showPage'
+      :togglePage='togglePage'
+      :getMatches='getMatches'/>
   </div>
 </template>
 
@@ -27,17 +31,19 @@ export default {
       }else{
         this.showPage=true
       }
+    },
+    getMatches(){
+      fetch('http://localhost:3000/animals')
+        .then(function(response){
+          return response.json();
+        })
+        .then(function(match){
+          console.log(match);
+        });
     }
   },
-  created(){
-    fetch('http://localhost3000/animals')
-      .then(function(response){
-        return response.json();
-      })
-      .then(function(match){
-        console.log(match);
-      });
-  }
+
+
 }
 </script>
 
